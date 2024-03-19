@@ -1,5 +1,7 @@
+/* Import Google Fonts */
 @import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
 
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +11,7 @@
     box-sizing: border-box;
 }
 
-
+/* Header Styles */
 header {
     width: 100%;
     height: 70px;
@@ -47,6 +49,7 @@ header nav ul li a.active {
     border-bottom-color: #04d9bf;
 }
 
+/* Hamburger Menu */
 .hamburger {
     cursor: pointer;
     display: none;
@@ -59,13 +62,14 @@ header nav ul li a.active {
     background: #04d9bf;
 }
 
-
+/* Container Styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
 }
 
+/* Text and Image Styles */
 .text {
     float: left;
     width: 50%;
@@ -89,19 +93,16 @@ img {
 
 span {
     color: #00dfc0;
-
     font-weight: 700;
 }
 
-h1,
-h2 {
+h1, h2 {
     font-size: 40px;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-
-    .text,
-    .image  {
+    .text, .image {
         width: 100%;
         float: none;
         margin-top: 10px;
@@ -143,13 +144,11 @@ h2 {
     }
 }
 
-
-
+/* About Section Styles */
 .about-section {
     background-color: #f4f4f4;
     text-align: center;
     padding: 80px 0;
-
 }
 
 .container2 {
@@ -159,45 +158,38 @@ h2 {
 }
 
 .about-text {
-    float: left;
-    width: 50%;
+    float: none;
+    width: 100%;
     box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
 .about-image {
-    float: left;
-    width: 40%;
+    float: none;
+    width: 100%;
     box-sizing: border-box;
-    margin-bottom: 100px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 .img2 {
+    display: block;
+    margin: 0 auto;
     filter: drop-shadow(5px 3px 12px #ccc);
+    max-width: 80%;
 }
-
 
 .info {
-    display: block;
-    font-size: 25px;
-    max-width: 100%;
+    font-size: 18px;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-
-    .about-text,
-    .about-image,
+@media (min-width: 768px) {
     .info {
-        width: 100%;
-        float: none;
+        max-width: 100%;
     }
 }
 
+/* Container 3 and 4 Styles */
 .container3 {
     width: 100%;
     padding: 35px 10%;
@@ -209,11 +201,11 @@ img {
     background-color: #f4f4f4;
 }
 
-.container3,
-.container4 {
+.container3, .container4 {
     padding-right: calc(10% - 30px);
 }
 
+/* Main Row Styles */
 main.row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -263,7 +255,6 @@ main.row {
 
 .box h4 {
     position: relative;
-
 }
 
 .box img {
@@ -308,8 +299,7 @@ main.row {
     }
 }
 
-
-
+/* Button Styles */
 .btn {
     background-color: #2d4149;
     border-radius: 6px;
@@ -327,6 +317,7 @@ main.row {
     color: #f4f4f4;
 }
 
+/* Container 5 Styles */
 .container5 {
     width: 100%;
     border-radius: 6px;
@@ -427,7 +418,7 @@ main.row {
     margin-top: 12px;
 }
 
-.right-side .button{
+.right-side .button {
     color: #ffffff;
     font-size: 18px;
     outline: none;
@@ -477,5 +468,22 @@ main.row {
     .container5 .content .right-side {
         width: 100%;
         margin-left: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .about-text {
+        width: 45%;
+        margin-bottom: 0;
+    }
+
+    .about-image {
+        width: 45%;
     }
 }
